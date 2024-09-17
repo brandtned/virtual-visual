@@ -17,5 +17,8 @@
   "description": "```sh npm create astro@latest -- --template basics ```",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.11"
+  }
 }
