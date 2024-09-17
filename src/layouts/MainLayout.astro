@@ -3,7 +3,6 @@ import Header from "../components/Header.astro";
 import Link from "../components/Link.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
-import "animate.css";
 const { title } = Astro.props;
 ---
 
@@ -13,6 +12,8 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link href="../styles/tailwind.css" rel="stylesheet" />
+
     <title>{Astro.props.title}</title>
   </head>
   <body class="px-4">
@@ -24,7 +25,7 @@ const { title } = Astro.props;
       <slot />
     </main>
 
-    <footer>
+    <footer class="bg-primary">
       <Footer />
     </footer>
   </body>
