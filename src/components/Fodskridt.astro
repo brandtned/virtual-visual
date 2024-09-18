@@ -2,4 +2,17 @@
 
 ---
 
-fodspor
+<div x-data="{ visible: false }" x-init="window.addEventListener('scroll', () => {
+    const elementTop = $el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight - 100) {
+      visible = true;
+    }
+  })"
+  :class="{'opacity-0': !visible, 'opacity-100': visible}"
+  class="transition-opacity duration-700 ease-in-out"
+>
+<img src="your-image.jpg" alt="Your Image" class="w-full h-auto">
+</div>
+
+<script src="//unpkg.com/alpinejs" defer></script>
