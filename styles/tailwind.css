@@ -8,6 +8,6 @@
   }
 
 .btn-link {
-    @apply px-6 py-3 text-xl font-bold uppercase tracking-wide transition-all duration-700 ease-in-out mr-8;
+    @apply px-6 py-3 text-xl font-normal uppercase tracking-wide transition-all duration-700 ease-in-out mr-8;
   }
 }

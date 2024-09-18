@@ -3,21 +3,22 @@ const link = Astro.props.link;
 const btnText = Astro.props.btnText;
 ---
 
- <!--  <a class="btn-link text-[#FFDA03] underline-offset-8 hover:underline inline-flex items-center" href={link}>
+  <a class="btn-link text-[#FFDA03] underline-offset-8 hover:underline inline-flex items-center" href={link}>
     {btnText}
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <line x1="0" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/>
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7-7 7" />
     </svg>
-  </a> -->
+  </a>
 
-  <a class="btn-link text-[#FFDA03] underline-offset-8 hover:underline inline-flex items-center py-10" href={link}>
+  <a class="btn-link text-[#FFDA03] underline-offset-8 hover:underline inline-flex items-center group" href={link}>
     {btnText}
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <line x1="0" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2.5"/>
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 5l7 7-7 7" />
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline ml-2 transition-transform duration-300 ease-in-out transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <line x1="0" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7-7 7" />
     </svg>
   </a>
+  
   
   
   
