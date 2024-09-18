@@ -3,30 +3,7 @@ const link = Astro.props.link;
 const btnText = Astro.props.btnText;
 ---
 
-<a class=primaryBtn href={link}>{btnText}</a>
-<div class="btn-1 pb-6"><button class="bg-white px-6 py-3 text-xl uppercase tracking-widest hover:bg-black hover:text-white">Standard</button></div> <!-- Adding letter spacing= tracking-widest -->
-			
+<a class="btn-base bg-[#ddefff] text-[#012b27] hover:bg-[#629d97] hover:text-[#ddefff]" href={link}>
+  {btnText}
+</a>
 
-<style>
-.primaryBtn {
-    color: white;
-    background-color: var(--secondaryColor);
-    padding: 10px 30px;
-    border-radius:4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.7s ease, color 0.7s ease, transform 0.5s ease;
-    margin-right: 30px;
-  }
-  
-  .primaryBtn:hover {
-    color: white;
-    background-color: var(--primaryColor);
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .primaryBtn {
-      font-size: 0.6rem;
-    }
-  }
-
-</style>
