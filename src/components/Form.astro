@@ -5,26 +5,28 @@
 <div
   class="bg-secondary rounded-3xl flex flex-col justify-center items-center max-w-xl"
 >
-  <h2 class="text-whiteish">Register dit digitale affald</h2>
-  <form class="w-7/12">
-    <input
-      type="text"
-      placeholder="Fornavn"
-      class="w-full px-1 pt-3 mb-4 bg-secondary border-b border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
-    />
-    <br />
+  <h2 class="text-whiteish text-3xl font-bold py-12">
+    Register dit digitale affald
+  </h2>
+  <img src="/svg/trash.svg" alt="" class="h-32" />
+  <form class="w-7/12 py-10">
+    <div class="flex">
+      <input
+        type="text"
+        placeholder="Fornavn"
+        class="w-full px-1 pt-3 mb-4 bg-secondary border-b border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
+      />
+    </div>
     <input
       type="text"
       placeholder="Efternavn"
       class="w-full px-1 pt-3 mb-4 bg-secondary border-b border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
     />
-    <br />
     <input
       type="email"
       placeholder="Email"
       class="w-full px-1 pt-3 mb-4 bg-secondary border-b border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
     />
-    <br />
     <select
       class="w-full pt-3 mb-4 bg-secondary border-b text-whiteish border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
     >
@@ -34,16 +36,14 @@
       <option value="sverige">Sverige</option>
       <option value="tyskland">Tyskland</option>
     </select>
-    <br />
     <input
       type="text"
       placeholder="Virksomhedsnavn (valgfrit)"
       class="w-full px-1 pt-3 mb-4 bg-secondary border-b border-whiteish focus:outline-none focus:ring-1 focus:ring-secondarylight placeholder:text-whiteish"
     />
-    <br />
 
     <div
-      class="flex justify-between items-center border-b text-whiteish border-gray-300 py-3 px-1 pb-0"
+      class="flex justify-between items-center border-b text-whiteish border-gray-300 pt-3 px-1 pb-0"
     >
       <label for="antal" class="text-white">Antal deltagere</label>
       <input
@@ -57,9 +57,7 @@
     <div
       class="flex justify-between items-center border-b text-whiteish border-gray-300 py-3 relative px-1 pt-6 pb-0"
     >
-      <label for="maengde" class="text-white"
-        >Mængde slettet <span class="px-2">(i GB)</span></label
-      >
+      <label for="maengde" class="text-white">Mængde slettet (i GB)</label>
       <input
         id="maengde"
         type="number"
@@ -73,5 +71,9 @@
     </div>
   </form>
   <br />
-  <input type="submit" value="Registrer" />
+  <input
+    type="submit"
+    value="Registrer"
+    class="bg-secondarylight px-12 p-2 rounded-full font-bold text-xl text-primary uppercase"
+  />
 </div>
