@@ -1,5 +1,10 @@
 ---
-
+const btnText = Astro.props.btnText;
 ---
 
-det "grønne/blå" banner
+<!-- Det "grønne/blå" banner -->
+<button class="btn-base bg-[#ddefff] text-[#012b27] hover:bg-[#629d97] hover:text-[#ddefff]">
+  {btnText}
+</button>
+
+
