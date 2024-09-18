@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Deltagerkort from "../components/Deltagerkort.astro";
+
 import Primarybtn from "../components/Primarybtn.astro";
 import "./styles/tailwind.css";
 import Secondarybtn from "../components/Secondarybtn.astro";
@@ -10,9 +12,9 @@ import Afrundtbanner2 from "..//components/Afrundtbanner2.astro";
 
 <body class="bg-primarylight px-8 py-8">
 
-<h1 class="text-3xl font-bold underline font-serif bg-accent">
-  Hello, Tailwind!
-</h1>			
+<MainLayout title="Titel">
+
+</MainLayout>			
 
 <Primarybtn btnText="Registrer" link="#" />
 <Secondarybtn btnText="Del med en ven" link="#" />
