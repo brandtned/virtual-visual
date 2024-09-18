@@ -3,5 +3,35 @@
 @tailwind utilities;
 
 @layer base{
+/* Base styling for all buttons */
+.btn {
+    text-transform: none;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+/* Variants */
+.btn.primary {
+    background-color: rgba(221, 239, 255);
+    color: rgb(1, 43, 39);
+}
 
+.btn.primary:hover {
+    background-color: rgba(98,157,151);
+    color: rgba(221, 239, 255);
+}
+
+.btn.secondary {
+    background-color: none;
+    color: rgba(221, 239, 255);
+    border: 1px solid rgba(221, 239, 255);
+}
+
+.btns.secondary:hover {
+    background-color: rgba(98,157,151);
+    color: rgba(221, 239, 255);
+}
+    
 }
