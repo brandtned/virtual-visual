@@ -2,7 +2,10 @@
 
 ---
 
-<div class="bg-secondary rounded flex justify-center items-center">
+<div
+  class="bg-secondary rounded-3xl flex flex-col justify-center items-center max-w-xl"
+>
+  <h2>Registrer dit</h2>
   <form class="">
     <input type="text" placeholder="Fornavn" />
     <br />
@@ -10,19 +13,20 @@
     <br />
     <input type="email" placeholder="Email" />
     <br />
-    <select>
-      <option value="" disabled selected>Vælg Land</option>
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+    <select class="w-full">
+      <option value="" disabled selected>Land</option>
+      <option value="danmark">Danmark</option>
+      <option value="norge">Norge</option>
+      <option value="sverige">Sverige</option>
+      <option value="tyskland">Tyskland</option>
     </select>
     <br />
     <input type="text" placeholder="Virksomhedsnavn (valgfrit)" />
     <br />
-    <input type="number" placeholder="Antal deltagere" />
+    <input type="number" value="1" placeholder="Antal deltagere" />
     <br />
-    <input type="number" placeholder="Mængde slettet (i GB)" />
-    <br />
-    <input type="submit" value="Registrer" />
+    <input type="number" value="0" placeholder="Mængde slettet (i GB)" />
   </form>
+  <br />
+  <input type="submit" value="Registrer" />
 </div>
