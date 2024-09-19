@@ -12,7 +12,10 @@ export default {
 			accent:'#FFDA03',
 			whiteish:'#F6FAFA'
 		},
-		extend: {},
+		extend: {      spacing: {
+			'100': '25rem',
+			'128': '32rem',
+		  }},
 	},
 	plugins: [],
 }
