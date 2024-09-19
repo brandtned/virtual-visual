@@ -3,8 +3,9 @@ const link = Astro.props.link;
 const btnText = Astro.props.btnText;
 ---
 
-<a class="btn-base border-2 text-[#ddefff] hover:bg-[#629d97] hover:text-[#ddefff]" href={link}>
-    {btnText}
-  </a>
-
-
+<a
+  class="btn-base border-2 text-[#ddefff] border-[#ddefff] hover:bg-[#629d97] hover:text-[#ddefff] px-8 py-3 text-base rounded-full transition"
+  href={link}
+>
+  {btnText}
+</a>
