@@ -3,12 +3,11 @@ const { imageSrc, altText, text } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center p-4 min-h-[200px]">
-    <img src={imageSrc} alt={altText} class="w-[100px] h-[100px] mb-4">
-    <p class="text-center max-w-[200px] text-sm text-white">
-        {text}
-    </p>
+  <img src={imageSrc} alt={altText} class="w-[100px] h-[100px] mb-4" />
+  <p class="text-center max-w-[200px] text-sm text-primarylight">
+    {text}
+  </p>
 </div>
-
 
 <!-- 
 <div class="bg-[#DDEFFF] w-full h-[1500px] sm:h-[720px] flex flex-col items-center justify-center px-4">

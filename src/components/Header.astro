@@ -2,74 +2,62 @@
 
 ---
 
+<!-- Navbar -->
 <div
   x-data="{ showmenu: false }"
-  class="fixed lg:static w-full bg-primary shadow-md"
+  class="fixed top-0 left-0 w-full bg-primary shadow-md z-50"
 >
   <div
     id="navbar"
     class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4"
   >
-    <!-- Logo Sektion -->
+    <!-- Logo Section -->
     <div id="logo" class="flex items-center ml-0 mr-16">
-      <!-- Logo placeret helt til venstre -->
-      <img src="/public/svg/logo_header.svg" alt="hjem" class="h-12" />
-      <!-- Logo med højden 12 -->
+      <img src="/svg/logo_header.svg" alt="hjem" class="h-12" />
     </div>
 
-    <!-- Desktop Navigation -->
+    <!-- Desktop Navigation (Hidden on Mobile) -->
     <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6">
-      <!-- Navigation links, venstre-centreret -->
       <ul class="flex flex-row space-x-12">
-        <!-- Afstand mellem links -->
         <li>
           <a
-            href="/hjem"
+            href="/index"
             class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
+
             >Hjem</a
           >
-          <!-- Link 1 -->
         </li>
         <li>
           <a
             href="/howto"
-            class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
+            class="text-[#F6FAFA] font-bold uppercase hover:text-accent transition"
             >How to</a
           >
-          <!-- Link 2 -->
         </li>
         <li>
           <a
-            href="/register"
+            href="/ressourcer"
             class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
             >Ressourcer</a
           >
-          <!-- Link 3 -->
         </li>
       </ul>
-      <button
-        id="burgermenu"
-        class="lg:hidden"
-        x-on:click="showmenu = ! showmenu">Menu</button
-      >
     </nav>
 
-    <!-- Knappen "Register" synlig på store skærme -->
+    <!-- Register Button for Large Screens -->
     <div class="hidden lg:block ml-auto">
       <a
         href="#køb_nu"
-        class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition"
-        >Register</a
+        class="px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full font-bold hover:bg-blue-200 transition"
+        >Registrere</a
       >
     </div>
 
-    <!-- Burger Menu Knappen til mobil -->
+    <!-- Burger Menu Button (Mobile) -->
     <button
-      id="burgermenu"
-      class="lg:hidden text-white focus:outline-none"
-      x-on:click="showmenu = ! showmenu"
+      class="lg:hidden text-seasalt focus:outline-none"
+      x-on:click="showmenu = !showmenu"
     >
-      <!-- Burger-ikon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6"
@@ -86,47 +74,42 @@
     </button>
   </div>
 
-  <!-- Mobilmenuen som vises, når burgerknappen er aktiv -->
+  <!-- Mobile Menu (Initially Hidden) -->
   <nav
     id="mobilmenu"
-    class="lg:hidden bg-[#012B27] flex flex-col items-center w-full py-4 space-y-4 border-t border-white"
+    class="lg:hidden bg-primary flex flex-col items-center w-full py-4 space-y-4 border-t-0"
     x-show="showmenu"
     x-transition
-    x-on:click="showmenu = false"
-    x-on:click.outside="showmenu = false"
+    @click.outside="showmenu = false"
   >
     <ul class="w-full">
       <li class="text-center py-2">
         <a
-          href="#hjem"
+          href="/hjem"
           class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
           >Hjem</a
         >
-        <!-- Mobil link 1 -->
       </li>
       <li class="text-center py-2">
         <a
-          href="#howto"
+          href="/howto"
           class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
           >How to</a
         >
-        <!-- Mobil link 2 -->
       </li>
       <li class="text-center py-2">
         <a
-          href="#ressourcer"
+          href="/ressourcer"
           class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
           >Ressourcer</a
         >
-        <!-- Mobil link 3 -->
       </li>
       <li class="text-center py-2">
         <a
-          href="#register"
+          href="/forms"
           class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition"
-          >Register</a
+          >Registrere</a
         >
-        <!-- Mobil knap -->
       </li>
     </ul>
   </nav>

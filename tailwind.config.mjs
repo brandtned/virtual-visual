@@ -10,11 +10,12 @@ export default {
 			secondary:'#629D97',
 			secondarylight:'#DDEFFF',
 			accent:'#FFDA03',
-			whiteish:'#F6FAFA'
+			seasalt:'#F6FAFA',
 		},
 		extend: {      spacing: {
 			'100': '25rem',
-			'128': '32rem',
+			'128': '39rem',
+			'130': '44rem'
 		  }},
 	},
 	plugins: [],
