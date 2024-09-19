@@ -13,25 +13,32 @@ import Afrundtbanner2 from "../components/Afrundtbanner2.astro";
 import Upbtn from "../components/Upbtn.astro";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Digital Cleanup Day">
   <section class="bg-primarylight w-full pt-16 md:pt-32 md:p-20">
-    <div class="">
-      <h1 class="text-7xl text-seasalt font-bold flex justify-end pb-10">
+    <div class="md: relative z-40">
+      <h1 class="text-7xl text-seasalt font-bold flex justify-end pb-4">
         Digital Cleanup Day
       </h1>
       <div class="flex justify-end">
-        <img src="/public/svg/datokalender.svg" alt="Kalender" class="" />
+        <img
+          src="/public/svg/datokalender.svg"
+          alt="Kalender"
+          class="max-w-100"
+        />
       </div>
-      <div class="flex items-center justify-end">
+      <div class="flex justify-end -mx-14">
         <Link btnText="Tilføj til kalender" links="" />
       </div>
 
-      <div class="flex items-center justify-end pb-8">
+      <div class="flex items-center justify-end py-8 -mx-8">
         <Primarybtn btnText="Registrer" link="/forms" />
         <Secondarybtn btnText="Del med en ven" link="#" />
       </div>
     </div>
   </section>
+  <div class="w-full bg-primarylight md:relative -mt-128 z-20">
+    <img src="/public/svg/forsideillu.svg" alt="" class="w-full" />
+  </div>
   <section class="bg-primary">
     <h2 class="text-seasalt text-5xl font-bold py-16 text-center">
       Hvad er Digital Cleanup Day?
