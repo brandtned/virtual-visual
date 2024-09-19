@@ -6,11 +6,19 @@ import Topbanner from "../components/Topbanner.astro";
 
 <MainLayout>
   <Topbanner />
-  <section
-    class="md:flex flex-row-reverse justify-center gap-64 p-12 bg-secondarylight -mb-40 z-50"
-  >
-    <div><Form /></div>
-    <img src="/public/svg/man-laptop05mline.svg" alt="" class="-mb-96 z-50" />
+  <section class="bg-secondarylight relative">
+    <div
+      class="md:flex flex-row-reverse justify-center gap-64 p-12 -mb-40 relative z-50"
+    >
+      <div class="relative z-50"><Form /></div>
+      <div class="relative left-10">
+        <img
+          src="/public/svg/falling-icons.svg"
+          alt=""
+          class="md:h-72 relative left-40 top-10"
+        /><img src="/public/svg/man-laptop05mline.svg" alt="" class="-mb-96" />
+      </div>
+    </div>
+    <img src="/public/svg/bakker.svg" alt="" class="w-full relative z-40" />
   </section>
-  <img src="/public/svg/bakker.svg" alt="" class="w-full bg-secondarylight" />
 </MainLayout>
