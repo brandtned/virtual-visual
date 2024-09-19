@@ -8,11 +8,14 @@ import Datacard from "../components/Datacard.astro";
 import Link from "../components/Link.astro";
 import Megafon from "../components/Megafon.astro";
 import Hvorforboks from "../components/Hvorforboks.astro";
+import FallingFiles from "../components/FallingFiles.astro";
 ---
 
 <MainLayout title="Titel">
   <section class="bg-primarylight">
+  
     <div class="p-10 px-24">
+      <FallingFiles />
       <h1 class="text-7xl text-whiteish font-bold flex justify-end pb-10">
         Digital Cleanup Day
       </h1>
@@ -23,6 +26,7 @@ import Hvorforboks from "../components/Hvorforboks.astro";
         <Primarybtn />
         <Secondarybtn />
         <Link />
+  
       </div>
     </div>
     <div class="bg-primarylight w-full absolut -mt-128">
@@ -84,6 +88,4 @@ import Hvorforboks from "../components/Hvorforboks.astro";
     </h2>
     <Deltagerkort />
   </section>
-
-  <Megafon />
 </MainLayout>
