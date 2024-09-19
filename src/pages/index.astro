@@ -14,29 +14,32 @@ import Upbtn from "../components/Upbtn.astro";
 ---
 
 <MainLayout title="Digital Cleanup Day">
-  <section class="bg-primarylight w-full pt-16 md:pt-32 md:p-20">
-    <div class="md: relative z-40">
-      <h1 class="text-7xl text-seasalt font-bold flex justify-end pb-4">
+  <section class="bg-primarylight w-full pt-36 md:pt-32 md:p-20">
+    <div class="md:relative z-40">
+      <h1
+        class="md:text-7xl text-5xl text-seasalt font-bold flex md:justify-end justify-center pb-4"
+      >
         Digital Cleanup Day
       </h1>
-      <div class="flex justify-end">
-        <img
-          src="/public/svg/datokalender.svg"
-          alt="Kalender"
-          class="max-w-100"
-        />
+      <div class="flex md:justify-end justify-center">
+        <img src="/public/svg/datokalender.svg" alt="Kalender" class="w-96" />
       </div>
-      <div class="flex justify-end -mx-14">
+      <div class="flex md:justify-end justify-center md:-mx-14">
         <Link btnText="Tilføj til kalender" links="" />
       </div>
 
-      <div class="flex items-center justify-end py-8 -mx-8">
+      <div
+        class="flex flex-col items-center space-y-4 md:flex-row md:justify-end justify-center md:space-y-0 md:space-x-4 py-8"
+      >
         <Primarybtn btnText="Registrer" link="/forms" />
         <Secondarybtn btnText="Del med en ven" link="#" />
       </div>
     </div>
   </section>
-  <div class="w-full bg-primarylight md:relative -mt-128 z-20">
+  <div class="md:hidden block bg-primarylight">
+    <img src="/public/svg/bakker.svg" alt="" />
+  </div>
+  <div class="hidden md:block w-full bg-primarylight md:relative -mt-128 z-20">
     <img src="/public/svg/forsideillu.svg" alt="" class="w-full" />
   </div>
   <section class="bg-primary">
@@ -106,6 +109,5 @@ import Upbtn from "../components/Upbtn.astro";
     <Deltagerkort />
   </section>
   <Upbtn />
-
-  <Megafon />
+  <div class="bg-seasalt h-96"></div>
 </MainLayout>
