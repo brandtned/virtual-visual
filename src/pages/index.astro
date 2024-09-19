@@ -8,6 +8,9 @@ import Datacard from "../components/Datacard.astro";
 import Link from "../components/Link.astro";
 import Megafon from "../components/Megafon.astro";
 import Hvorforboks from "../components/Hvorforboks.astro";
+import Afrundtbanner1 from "../components/Afrundtbanner1.astro";
+import Afrundtbanner2 from "../components/Afrundtbanner2.astro";
+import Upbtn from "../components/Upbtn.astro";
 ---
 
 <MainLayout title="Titel">
@@ -24,11 +27,14 @@ import Hvorforboks from "../components/Hvorforboks.astro";
         </div>
         <img src="/svg/kalender.svg" alt="" class="h-40" />
       </div>
+      <div class="flex items-center justify-end">
+        <Link btnText="Tilfoj til kalender" link="#" />
+      </div>
+      
     </div>
-    <div class="flex">
-      <Primarybtn />
-      <Secondarybtn />
-      <Link />
+    <div class="flex items-center justify-end pb-8">
+      <Primarybtn btnText="Registrer" link="#" />
+      <Secondarybtn btnText="Del med en ven" link="#" />
     </div>
     <div id="bakker+kvindekomponent"></div>
   </section>
@@ -72,15 +78,22 @@ import Hvorforboks from "../components/Hvorforboks.astro";
       />
     </div>
   </section>
-  BANNER
+  <div class="-mt-10">
+  <Afrundtbanner1 btnText="Skær ned på dit CO2-udslip ved at deltage i Digital Cleanup Day!" />
+</div>
   <section><Hvorforboks /></section>
-  <section class="whiteish"><Factcard /></section>
-  BANNER
+  <section class="seasalt"><Factcard /></section>
+
+  
+
   <section class="bg-primary">
     <h2>Sådan deltager du i Digital Clenaup Day</h2>
     <Deltagerkort />
   </section>
-
+<div class="flex items-center justify-end pb-8 -mt-96">
+  <Afrundtbanner2 btnText="Husk Digital Clenaup Day d. 15 marts 2025" />
+</div>
+  <Upbtn/>
   <Megafon />
 </MainLayout>
 
