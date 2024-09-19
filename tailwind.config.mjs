@@ -13,6 +13,7 @@ export default {
 			seasalt:'#F6FAFA',
 		},
 		extend: {      spacing: {
+			'58': '230px',
 			'100': '25rem',
 			'128': '39rem',
 			'130': '44rem'
