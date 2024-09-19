@@ -12,27 +12,22 @@ import Hvorforboks from "../components/Hvorforboks.astro";
 
 <MainLayout title="Titel">
   <section class="bg-primarylight">
-    <div class="p-20">
+    <div class="p-10 px-24">
       <h1 class="text-7xl text-whiteish font-bold flex justify-end pb-10">
         Digital Cleanup Day
       </h1>
       <div class="flex justify-end">
-        <div class="text-accent px-2">
-          <p class="text-6xl flex justify-end">25. Marts</p><h1
-            class="text-8xl font-bold flex justify-end"
-          >
-            2025
-          </h1>
-        </div>
-        <img src="/svg/kalender.svg" alt="" class="h-40" />
+        <img src="/public/svg/datokalender.svg" alt="" class="z-50 -mt-2" />
+      </div>
+      <div class="flex">
+        <Primarybtn />
+        <Secondarybtn />
+        <Link />
       </div>
     </div>
-    <div class="flex">
-      <Primarybtn />
-      <Secondarybtn />
-      <Link />
+    <div class="bg-primarylight w-full absolut -mt-128">
+      <img src="/svg/forsideillu.svg" alt="" class="w-full -z-50" />
     </div>
-    <div><img src="/svg/forsideillu.svg" alt="" /></div>
   </section>
   <section class="bg-primary">
     <h2 class="text-whiteish text-5xl font-bold py-16 text-center">
@@ -77,12 +72,17 @@ import Hvorforboks from "../components/Hvorforboks.astro";
   BANNER
   <section><Hvorforboks /></section>
   <section class="whiteish">
-    <h2 class="text-primary text-3xl font-bold mb-[5%] text-center">Flere gode grunde til at deltage</h2>
-    <Factcard /></section>
+    <h2 class="text-primary text-3xl font-bold mb-[5%] text-center">
+      Flere gode grunde til at deltage
+    </h2>
+    <Factcard />
+  </section>
   BANNER
   <section class="bg-primary">
-    <h2 class="text-secondarylight text-3xl font-bold mb-[5%] text-center">Sådan deltager du i Digital Clenaup Day</h2>
-<Deltagerkort />
+    <h2 class="text-secondarylight text-3xl font-bold mb-[5%] text-center">
+      Sådan deltager du i Digital Clenaup Day
+    </h2>
+    <Deltagerkort />
   </section>
 
   <Megafon />
