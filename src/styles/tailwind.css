@@ -10,4 +10,7 @@
 .btn-link {
     @apply px-6 py-3 text-sm font-normal uppercase tracking-wide transition-all duration-700 ease-in-out mr-8;
   }
+  .btn-link2 {
+    @apply px-6 py-3 text-sm font-normal tracking-wide transition-all duration-700 ease-in-out mr-8;
+  }
 }
