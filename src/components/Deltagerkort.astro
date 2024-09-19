@@ -1,5 +1,6 @@
 ---
-
+import Primarybtn from "../components/Primarybtn.astro";
+import Secondarybtn from "../components/Secondarybtn.astro";
 ---
 
 <div class="flex flex-wrap justify-center items-stretch h-auto gap-4 p-20">
@@ -16,11 +17,7 @@
     </p>
   </div>
   <div>
-    <button
-      class="mt-8 bg-[#F6FAFA] text-[#012B27] font-semibold py-1 px-12 rounded-full"
-    >
-      REGISTRER
-    </button>
+    <Primarybtn btnText="Registrer" link="/forms" />
   </div>
 </div>
   <div
@@ -35,14 +32,10 @@
         Tilmeld din virksomhed eller organisation til Digital Cleanup Day 2025
       </p>
     </div>
-    <div>
-      <button
-        class="mt-8 border-2 border-seasalt bg-primarylight text-[#F6FAFA] font-semibold py-1 px-12 rounded-full"
-      >
-        REGISTRER
-      </button>
+    <div class="mt-4 mb-2 justify-center">
+      <Secondarybtn btnText="Registrer" link="#" />
     </div>
   </div>
-
- 
 </div>
+
+
