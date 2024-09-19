@@ -2,14 +2,16 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Megafon from "../components/Megafon.astro";
 import Fodskridt from "../components/Fodskridt.astro";
+import FireFodskridt from "../components/FireFodskridt.astro";
 import Factcard from "../components/Factcard.astro";
-import HvorforBoks from "../components/HvorforBoks.astro";
 import DataCard from "../components/DataCard.astro";
 import Howtotrin from "../components/Howtotrin.astro";
+import Topbanner from "../components/Topbanner.astro";
 ---
 
 <MainLayout title="Titel">
 
+    <Topbanner />
 
 
     <DataCard
@@ -18,7 +20,6 @@ import Howtotrin from "../components/Howtotrin.astro";
     headline="Headline"
     paragraphText="Text"
  /> 
-<HvorforBoks/>
 
 
  <Factcard
@@ -34,8 +35,9 @@ altText="foto"
 headline="Trin 1: Ryd op i din smartphone"
 paragraphText="Slet apps, du sjældent eller aldrig bruger, da de kan dræne batteri og bruge data. Fjern også gamle konti og data for at øge din telefons hastighed og batterilevetid. Gennemgå dine fotos og "
  />
-<Fodskridt
-src="/svg/fodsporvol2.svg" />
+
+<FireFodskridt />
+
 <Megafon/>
 
 </MainLayout>
