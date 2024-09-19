@@ -38,22 +38,30 @@ import Fodskridt from "../components/Fodskridt.astro";
       enkeltpersoner og virksomheder til at rydde op og omstrukturere deres
       online tilstedeværelse.
     </p>
-    <Datacard />
     <div>
-      <Datacard />
-      <Datacard />
-      <Datacard />
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="Headline"
+        paragraphText="Text"
+      />
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="Headline"
+        paragraphText="Text"
+      />
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="Headline"
+        paragraphText="Text"
+      />
     </div>
   </section>
   BANNER
-  <section class="bg-secondarylight">
-    <h2>Hvorfor skal man rydde op i sine digitale data?</h2>
-    <div>hvorforboks*3</div>
-  </section>
-  <section>
-    <h2>Flere gode grunde til at deltage</h2>
-    <Factcard />
-  </section>
+  <section><Hvorforboks /></section>
+  <section class="whiteish"><Factcard /></section>
   BANNER
   <section class="bg-primary">
     <h2>Sådan deltager du i Digital Clenaup Day</h2>
@@ -61,26 +69,5 @@ import Fodskridt from "../components/Fodskridt.astro";
   </section>
   <section class="bg-whiteish h-36"></section>
 
-  <Datacard
-    imageSrc="/svg/document.svg"
-    altText="foto"
-    headline="Headline"
-    paragraphText="Text"
-  />
-  <Hvorforboks />
-
-  <Factcard
-    imageSrc="/svg/document.svg"
-    altText="foto"
-    headline="Headline"
-    paragraphText="Text"
-  />
-
-  <Howtotrin
-    imageSrc="/svg/document.svg"
-    altText="foto"
-    headline="Trin 1: Ryd op i din smartphone"
-    paragraphText="Slet apps, du sjældent eller aldrig bruger, da de kan dræne batteri og bruge data. Fjern også gamle konti og data for at øge din telefons hastighed og batterilevetid. Gennemgå dine fotos og "
-  />
   <Megafon />
 </MainLayout>
