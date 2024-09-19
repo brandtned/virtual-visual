@@ -4,21 +4,21 @@
 <div x-data="{ showmenu: false }" class="fixed lg:static w-full bg-[#012B27] shadow-md">
     <div id="navbar" class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4">
         <!-- Logo Sektion -->
-        <div id="logo" class="flex items-center ml-0 mr-16"> <!-- Logo placeret helt til venstre -->
+        <a href="index.astro" id="logo" class="flex items-center ml-0 mr-16"> <!-- Logo placeret helt til venstre -->
             <img src="/public/svg/logo_header.svg" alt="hjem" class="h-12"> <!-- Logo med højden 12 -->
-        </div>
+        </a>
 
         <!-- Desktop Navigation -->
         <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6"> <!-- Navigation links, venstre-centreret -->
             <ul class="flex flex-row space-x-12"> <!-- Afstand mellem links -->
                 <li>
-                    <a href="#hjem" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Hjem</a> <!-- Link 1 -->
+                    <a href="index.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Hjem</a> <!-- Link 1 -->
                 </li>
                 <li>
-                    <a href="#howto" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">How to</a> <!-- Link 2 -->
+                    <a href="#howto.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">How to</a> <!-- Link 2 -->
                 </li>
                 <li>
-                    <a href="#register" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Ressourcer</a> <!-- Link 3 -->
+                    <a href="resourcer.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Ressourcer</a> <!-- Link 3 -->
                 </li>
             </ul>
             <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
@@ -26,7 +26,7 @@
 
         <!-- Knappen "Register" synlig på store skærme -->
         <div class="hidden lg:block ml-auto">
-            <a href="#køb_nu" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a>
+            <a href="forms.astro" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a>
         </div>
 
         <!-- Burger Menu Knappen til mobil -->
