@@ -11,12 +11,12 @@
     id="navbar"
     class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4"
   >
-    <!-- Logo Section -->
+    <!-- Logo  -->
     <div id="logo" class="flex items-center ml-0 mr-16">
       <img src="/svg/logo_header.svg" alt="hjem" class="h-12" />
     </div>
 
-    <!-- Desktop Navigation (Hidden on Mobile) -->
+    <!-- Desktop menu, som skjules på mobile -->
     <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6">
       <ul class="flex flex-row space-x-12">
         <li>
@@ -43,7 +43,7 @@
       </ul>
     </nav>
 
-    <!-- Register Button for Large Screens -->
+    <!-- Registrer-knap til desktop -->
     <div class="hidden lg:block ml-auto">
       <a
         href="/forms"
@@ -52,7 +52,7 @@
       >
     </div>
 
-    <!-- Burger Menu Button (Mobile) -->
+    <!-- Burger-menu knap til mobile -->
     <button
       class="lg:hidden text-seasalt focus:outline-none"
       x-on:click="showmenu = !showmenu"
@@ -73,7 +73,7 @@
     </button>
   </div>
 
-  <!-- Mobile Menu (Initially Hidden) -->
+  <!-- Mobilemenu - skjult til at starte med i desktop -->
   <nav
     id="mobilmenu"
     class="lg:hidden bg-primary flex flex-col items-center w-full py-4 space-y-4 border-t-0"
