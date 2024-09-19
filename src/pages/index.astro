@@ -1,9 +1,59 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Deltagerkort from "../components/Deltagerkort.astro";
-
+import Primarybtn from "../components/Primarybtn.astro";
+import Secondarybtn from "../components/Secondarybtn.astro";
+import Factcard from "../components/Factcard.astro";
+import Datacard from "../components/Datacard.astro";
+import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Titel">
-
+  <section class="bg-primarylight">
+    <h1>Digital Cleanup Day</h1>
+    <div>
+      <div><p>25. Marts</p><h1>2025</h1></div>
+      <img src="/svg/kalender.svg" alt="" class="h-40" />
+    </div>
+    <div class="flex">
+      <Primarybtn />
+      <Secondarybtn />
+      <Link />
+    </div>
+    <div id="bakker+kvindekomponent"></div>
+  </section>
+  <section class="bg-primary">
+    <h2>Hvad er Digital Cleanup Day?</h2>
+    <p>
+      Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale
+      liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day.
+    </p>
+    <p>
+      Nu på sit femte år og organiseret af Let's Do It World, sigter Digital
+      Cleanup Day mod at skabe opmærksomhed omkring digital forurening, opfordre
+      enkeltpersoner og virksomheder til at rydde op og omstrukturere deres
+      online tilstedeværelse.
+    </p>
+    <Datacard />
+    <div>
+      <Datacard />
+      <Datacard />
+      <Datacard />
+    </div>
+  </section>
+  BANNER
+  <section class="bg-secondarylight">
+    <h2>Hvorfor skal man rydde op i sine digitale data?</h2>
+    <div>hvorforboks*3</div>
+  </section>
+  <section>
+    <h2>Flere gode grunde til at deltage</h2>
+    <Factcard />
+  </section>
+  BANNER
+  <section class="bg-primary">
+    <h2>Sådan deltager du i Digital Clenaup Day</h2>
+    <Deltagerkort />
+  </section>
+  <section class="bg-whiteish h-36"></section>
 </MainLayout>
