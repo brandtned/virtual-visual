@@ -14,7 +14,7 @@ import Upbtn from "../components/Upbtn.astro";
 ---
 
 <MainLayout title="Digital Cleanup Day">
-  <section class="bg-primarylight w-full pt-36 md:pt-32 md:p-20">
+  <section class="bg-primarylight w-full pt-36 md:pt-32 md:px-20">
     <div class="md:relative z-40">
       <h1
         class="md:text-7xl text-5xl text-seasalt font-bold flex md:justify-end justify-center pb-4"
@@ -61,7 +61,9 @@ import Upbtn from "../components/Upbtn.astro";
         deres online tilstedeværelse.
       </p>
     </div>
-    <div class="flex justify-center">
+    <div
+      class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6"
+    >
       <Datacard
         imageSrc="/svg/people.svg"
         alt="gruppe af mennesker"
