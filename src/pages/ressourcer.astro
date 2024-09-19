@@ -1,5 +1,55 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import Upbtn from "../components/Upbtn.astro";
 ---
 
-<MainLayout />
+<MainLayout title="Titel">
+   
+    <h2 class="font-bold text-4xl text-center p-14">Ressourcer</h2>
+
+    <!-- Tilføj en container omkring sektionen -->
+    <div class="flex items-center justify-center min-h-[40vh] pb-20">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-x-32 font-semibold max-w-7xl mx-auto">
+            
+            <article class="flex flex-col items-center justify-center text-center">
+                <h3 class="text-lg font-bold pb-4">Vejledninger til privatpersoner</h3>
+                <div class="flex flex-col items-start">
+                    <Link btnText="Ny kalender 1" link="#" />
+                    <Link btnText="Ny kalender 2" link="#" />
+                    <Link btnText="Ny kalender 3" link="#" />
+                    <Link btnText="Ny kalender 4" link="#" />
+                </div>
+            </article>
+        
+            <article class="flex flex-col items-center justify-center text-center">
+                <h3 class="text-lg font-bold pb-4">Vejledninger til privatpersoner</h3>
+                <div class="flex flex-col items-start">
+                    <Link btnText="Ny kalender 5" link="#" />
+                    <Link btnText="Ny kalender 6" link="#" />
+                    <Link btnText="Ny kalender 7" link="#" />
+                    <Link btnText="Ny kalender 8" link="#" />
+                </div>
+            </article>
+        
+            <article class="flex flex-col items-center justify-center text-center">
+                <h3 class="text-lg font-bold pb-4">Vejledninger til privatpersoner</h3>
+                <div class="flex flex-col items-start">
+                    <Link btnText="Ny kalender 9" link="#" />
+                    <Link btnText="Ny kalender 10" link="#" />
+                    <Link btnText="Ny kalender 11" link="#" />
+                    <Link btnText="Ny kalender 12" link="#" />
+                </div>
+            </article>
+        </section>
+    </div>
+    
+    <Upbtn>
+    
+    </MainLayout>	
+
+</Footer>
+<!-- -------------------------------------------------------- -->
+<style>
+
+</style>

@@ -4,7 +4,7 @@
 <div x-data="{ showmenu: false }" class="fixed lg:static w-full bg-[#012B27] shadow-md">
     <div id="navbar" class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4">
         <!-- Logo Sektion -->
-        <a href="index.astro" id="logo" class="flex items-center ml-0 mr-16"> <!-- Logo placeret helt til venstre -->
+        <a href="/" id="logo" class="flex items-center ml-0 mr-16"> <!-- Logo placeret helt til venstre -->
             <img src="/public/svg/logo_header.svg" alt="hjem" class="h-12"> <!-- Logo med højden 12 -->
         </a>
 
@@ -12,13 +12,13 @@
         <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6"> <!-- Navigation links, venstre-centreret -->
             <ul class="flex flex-row space-x-12"> <!-- Afstand mellem links -->
                 <li>
-                    <a href="index.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Hjem</a> <!-- Link 1 -->
+                    <a href="/" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Hjem</a> <!-- Link 1 -->
                 </li>
                 <li>
-                    <a href="#howto.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">How to</a> <!-- Link 2 -->
+                    <a href="/howto" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">How to</a> <!-- Link 2 -->
                 </li>
                 <li>
-                    <a href="resourcer.astro" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Ressourcer</a> <!-- Link 3 -->
+                    <a href="/ressourcer" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Ressourcer</a> <!-- Link 3 -->
                 </li>
             </ul>
             <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
@@ -42,16 +42,16 @@
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="w-full">
             <li class="text-center py-2">
-                <a href="#hjem" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Hjem</a> <!-- Mobil link 1 -->
+                <a href="/hjem" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Hjem</a> <!-- Mobil link 1 -->
             </li>
             <li class="text-center py-2">
-                <a href="#howto" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">How to</a> <!-- Mobil link 2 -->
+                <a href="/howto" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">How to</a> <!-- Mobil link 2 -->
             </li>
             <li class="text-center py-2">
-                <a href="#ressourcer" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Ressourcer</a> <!-- Mobil link 3 -->
+                <a href="/ressourcer" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Ressourcer</a> <!-- Mobil link 3 -->
             </li>
             <li class="text-center py-2">
-                <a href="#register" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a> <!-- Mobil knap -->
+                <a href="/forms" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a> <!-- Mobil knap -->
             </li>
         </ul>
     </nav>
