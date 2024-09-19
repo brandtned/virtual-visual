@@ -5,28 +5,28 @@ import Topbanner from "../components/Topbanner.astro";
 ---
 
 <MainLayout>
-  <Topbanner />
+  <div class="pt-20"><Topbanner /></div>
   <section class="bg-secondarylight md:relative">
     <div
-      class="md:flex flex-row-reverse justify-center gap-64 p-12 md:-mb-40 md:relative z-50"
+      class="md:flex flex-row-reverse justify-center gap-64 p-12 md:-mb-40 md:relative z-40"
     >
-      <div class="md:relative z-50"><Form /></div>
-      <div class="md:relative left-10">
+      <div class="md:relative z-40"><Form /></div>
+      <div class="md:relative left-10 hidden md:block">
         <img
-          src="/public/svg/falling-icons.svg"
+          src="/svg/falling-icons.svg"
           alt="samling af administrative iconer"
           class="md:h-72 md:relative md:left-40 md:top-10"
         /><img
-          src="/public/svg/man-laptop05mline.svg"
+          src="/svg/man-laptop05mline.svg"
           alt="stående mand med computer i hænderne"
           class="md:-mb-96"
         />
       </div>
     </div>
     <img
-      src="/public/svg/bakker.svg"
+      src="/svg/bakker.svg"
       alt="bakker"
-      class="w-full md:relative z-0 md:z-40"
+      class="w-full md:relative z-0 md:z-30"
     />
   </section>
 </MainLayout>
