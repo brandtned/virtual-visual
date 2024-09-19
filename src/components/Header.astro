@@ -1,116 +1,54 @@
 ---
-
+import Primarybtn from "../components/Primarybtn.astro";
 ---
 
 <!-- Navbar -->
-<div
-  x-data="{ showmenu: false }"
-  class="fixed top-0 left-0 w-full bg-primary shadow-md z-50"
->
-  <div
-    id="navbar"
-    class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4"
-  >
-    <!-- Logo  -->
-    <a href="/hjem"
-      ><div id="logo" class="flex items-center ml-0 mr-16">
-        <img src="/svg/logo.png" alt="hjem" class="h-14" />
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsiv Header Menu</title>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header x-data="{ showMenu: false }" class="fixed top-0 left-0 w-full bg-primary shadow-md z-50">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+      <!-- Logo -->
+      <a href="/hjem">
+        <div id="logo" class="flex items-center">
+          <img src="/svg/logo.png" alt="Hjem" class="h-14" />
+        </div>
+      </a>
+
+      <!-- Desktop Menu (kun synlig på store skærme) -->
+      <nav class="hidden lg:flex space-x-12 ml-6">
+        <a href="/" class="text-seasalt font-bold uppercase hover:text-accent transition">Hjem</a>
+        <a href="/howto" class="text-seasalt  font-bold uppercase hover:text-accent transition">How to</a>
+        <a href="/ressourcer" class="text-seasalt  font-bold uppercase hover:text-accent transition">Ressourcer</a>
+      </nav>
+
+      <div class="hidden lg:block ml-auto">
+        <Primarybtn btnText="Registrer" link="/forms" />
       </div>
 
-    <!-- Desktop menu, som skjules på mobile -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6">
-      <ul class="flex flex-row space-x-12">
-        <li>
-          <a
-            href="/"
-            class="text-[#F6FAFA] font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
-            >Hjem</a
-          >
-        </li>
-        <li>
-          <a
-            href="/howto"
-            class="text-[#F6FAFA] font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
-            >How to</a
-          >
-        </li>
-        <li>
-          <a
-            href="/ressourcer"
-            class="text-[#F6FAFA] font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
-            >Ressourcer</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Registrer-knap til desktop -->
-    <div class="hidden lg:block ml-auto">
-      <a
-        href="/forms"
-        class="px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full font-bold hover:bg-accent transition"
-        >Registrer</a
-      >
+      <!-- Burger Menu Knappen til mobil -->
+      <button @click="showMenu = !showMenu" class="lg:hidden text-seasalt  focus:outline-none ml-4">
+        <!-- Ikon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
 
-    <!-- Burger-menu knap til mobile -->
-    <button
-      class="lg:hidden text-seasalt focus:outline-none"
-      x-on:click="showmenu = !showmenu"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobilemenu - skjult til at starte med i desktop -->
-  <nav
-    id="mobilmenu"
-    class="lg:hidden bg-primary flex flex-col items-center w-full py-4 space-y-4 border-t-0"
-    x-show="showmenu"
-    x-transition
-    @click.outside="showmenu = false"
-  >
-    <ul class="w-full">
-      <li class="text-center py-2">
-        <a
-          href="/"
-          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
-          >Hjem</a
-        >
-      </li>
-      <li class="text-center py-2">
-        <a
-          href="/howto"
-          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
-          >How to</a
-        >
-      </li>
-      <li class="text-center py-2">
-        <a
-          href="/ressourcer"
-          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
-          >Ressourcer</a
-        >
-      </li>
-      <li class="text-center py-2">
-        <a
-          href="/forms"
-          class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition"
-          >Registrer</a
-        >
-      </li>
-    </ul>
-  </nav>
-</div>
+    <!-- Mobil Menu (vises når showMenu er true) -->
+    <nav x-show="showMenu" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="lg:hidden bg-primary w-full py-4">
+      <ul class="flex flex-col items-center space-y-4">
+        <li><a href="/" class="text-seasalt font-bold uppercase hover:text-accent transition">Hjem</a></li>
+        <li><a href="/howto" class="text-seasalt  font-bold uppercase hover:text-accent transition">How to</a></li>
+        <li><a href="/ressourcer" class="text-seasalt  font-bold uppercase hover:text-accent transition">Ressourcer</a></li>
+        <Primarybtn btnText="Registrer" link="/forms" />
+    </nav>
+  </header>
