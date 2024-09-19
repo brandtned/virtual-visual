@@ -1,8 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Form from "../components/Form.astro";
+import Topbanner from "../components/Topbanner.astro";
 ---
 
 <MainLayout>
-  <Form />
+  <Topbanner />
+  <section class="flex justify-center gap-64">
+    <div class="">
+      <img src="/public/svg/man-laptop05mline.svg" alt="" class="" />
+    </div>
+    <div><Form /></div>
+  </section>
 </MainLayout>
