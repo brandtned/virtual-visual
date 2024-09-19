@@ -1,5 +1,7 @@
-
-<div x-data="{ active: false, hover: false }" class="fixed bottom-5 left-5 z-50"> <!-- Added z-50 -->
+<div
+  x-data="{ active: false, hover: false }"
+  class="fixed bottom-5 left-5 z-50"
+>
   <a href="#" @click.prevent="active = !active">
     <img
       @mouseover="hover = true"
@@ -12,4 +14,5 @@
   </a>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer
+></script>
