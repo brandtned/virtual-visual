@@ -10,7 +10,7 @@ export default {
 			secondary:'#629D97',
 			secondarylight:'#DDEFFF',
 			accent:'#FFDA03',
-			whiteish:'#F6FAFA'
+			seasalt:'#F6FAFA',
 		},
 		extend: {      spacing: {
 			'100': '25rem',

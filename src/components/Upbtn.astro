@@ -1,0 +1,32 @@
+---
+
+---
+
+<!-- Up Arrow Button -->
+<button id="scrollUp" class="group fixed bottom-4 right-4 w-12 h-12 rounded-full bg-[#f6fafa] flex items-center justify-center hover:bg-[#DDEFFF] focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#012B27] group-hover:stroke-[#012B27]" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
+    </svg>
+  </button>
+
+
+  <!-- Down Arrow Button -->
+<!-- <button id="scrollDown" class="relative w-12 h-12 rounded-full bg-[#ddefff] text-[#012b27] border border-[#012b27] flex items-center justify-center hover:bg-[#bcdfff] focus:outline-none transition-colors duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 9l7 7 7-7" />
+    </svg>
+  </button> -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('scrollUp').addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  
+
+  
