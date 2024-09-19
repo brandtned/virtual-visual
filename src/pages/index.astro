@@ -2,23 +2,87 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Deltagerkort from "../components/Deltagerkort.astro";
 import Primarybtn from "../components/Primarybtn.astro";
-import "../styles/tailwind.css";
 import Secondarybtn from "../components/Secondarybtn.astro";
+import Factcard from "../components/Factcard.astro";
+import Datacard from "../components/Datacard.astro";
 import Link from "../components/Link.astro";
-import Afrundtbanner1 from "../components/Afrundtbanner1.astro";
-import Afrundtbanner2 from "../components/Afrundtbanner2.astro";
-import Upbtn from "..//components/Upbtn.astro";
+import Megafon from "../components/Megafon.astro";
+import Hvorforboks from "../components/Hvorforboks.astro";
 ---
 
 <MainLayout title="Titel">
-<Primarybtn btnText="Registrer" link="#" />
-<Secondarybtn btnText="Del med en ven" link="#" />
-<Link btnText="Tilfoj til kalender" link="#" />
-<Afrundtbanner1 btnText="Skær ned på dit CO2-udslip ved at deltage i Digital Cleanup Day!" />
-<Afrundtbanner2 btnText="Husk Digital Clenaup Day d. 15 marts 2025" />
-<Upbtn>
+  <section class="bg-primarylight">
+    <div class="p-24">
+      <h1 class="text-7xl text-whiteish font-bold flex justify-end">
+        Digital Cleanup Day
+      </h1>
+      <div class="flex justify-end">
+        <div class="text-accent">
+          <p class="text-6xl">25. Marts</p><h1 class="text-8xl font-bold">
+            2025
+          </h1>
+        </div>
+        <img src="/svg/kalender.svg" alt="" class="h-40" />
+      </div>
+    </div>
+    <div class="flex">
+      <Primarybtn />
+      <Secondarybtn />
+      <Link />
+    </div>
+    <div id="bakker+kvindekomponent"></div>
+  </section>
+  <section class="bg-primary">
+    <h2 class="text-whiteish text-5xl font-bold py-16 text-center">
+      Hvad er Digital Cleanup Day?
+    </h2>
+    <div
+      class="leading-relaxed text-whiteish text-lg mx-auto max-w-xl font-light"
+    >
+      <p>
+        <span class="font-bold">Digital Cleanup Day</span> er en dag dedikeret til
+        at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø
+        på World Cleanup Day.
+      </p>
+      <p class="py-6">
+        Nu på sit femte år og organiseret af Let's Do It World, sigter Digital
+        Cleanup Day mod at skabe opmærksomhed omkring digital forurening,
+        opfordre enkeltpersoner og virksomheder til at rydde op og omstrukturere
+        deres online tilstedeværelse.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="1.184.747"
+        paragraphText="deltagere har reduceret datalagring, hvilket sparer energi og CO2. Det svarer til energibesparelsen af millioner timers LED-lys."
+      />
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="14,5 M GB"
+        paragraphText="data slettet svarende til 7,25 millioner timers HD-video eller tusindvis af husstandes årlige elforbrug."
+      />
+      <Datacard
+        imageSrc="/svg/document.svg"
+        altText="foto"
+        headline="3.625 tons"
+        paragraphText="CO2-produktion forhindret årligt. Det svarer til at plante 60.000 træer eller tage 785 biler ud af drift i et år."
+      />
+    </div>
+  </section>
+  BANNER
+  <section><Hvorforboks /></section>
+  <section class="whiteish"><Factcard /></section>
+  BANNER
+  <section class="bg-primary">
+    <h2>Sådan deltager du i Digital Clenaup Day</h2>
+    <Deltagerkort />
+  </section>
 
-</MainLayout>	
+  <Megafon />
+</MainLayout>
 
 </Footer>
 <!-- -------------------------------------------------------- -->
