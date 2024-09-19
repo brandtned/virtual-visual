@@ -1,5 +1,6 @@
 ---
-
+// You can pass props if needed, such as `src` for the image source.
+const { src, alt = 'Image' } = Astro.props;
 ---
 
 <div x-data="{ visible: false }" x-init="window.addEventListener('scroll', () => {
@@ -12,7 +13,13 @@
   :class="{'opacity-0': !visible, 'opacity-100': visible}"
   class="transition-opacity duration-700 ease-in-out"
 >
-<img src="/svg/fodspor.svg" alt="Your Image" class="w-12 h-12 md:w-16 md:h-16 mx-auto">
+<img src="/svg/fodsporvol2.svg" alt="Your Image">
 </div>
+
+<style>
+    .transition-opacity {
+        transition: opacity 0.7s ease-in-out;
+    }
+</style>
 
 <script src="//unpkg.com/alpinejs" defer></script>
