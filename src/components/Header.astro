@@ -1,58 +1,133 @@
 ---
 
 ---
-<div x-data="{ showmenu: false }" class="fixed lg:static w-full bg-[#012B27] shadow-md">
-    <div id="navbar" class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4">
-        <!-- Logo Sektion -->
-        <div id="logo" class="flex items-center ml-0 mr-16"> <!-- Logo placeret helt til venstre -->
-            <img src="/public/svg/logo_header.svg" alt="hjem" class="h-12"> <!-- Logo med højden 12 -->
-        </div>
 
-        <!-- Desktop Navigation -->
-        <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6"> <!-- Navigation links, venstre-centreret -->
-            <ul class="flex flex-row space-x-12"> <!-- Afstand mellem links -->
-                <li>
-                    <a href="/hjem" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Hjem</a> <!-- Link 1 -->
-                </li>
-                <li>
-                    <a href="/howto" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">How to</a> <!-- Link 2 -->
-                </li>
-                <li>
-                    <a href="/register" class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition">Ressourcer</a> <!-- Link 3 -->
-                </li>
-            </ul>
-            <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
-        </nav>
-
-        <!-- Knappen "Register" synlig på store skærme -->
-        <div class="hidden lg:block ml-auto">
-            <a href="#køb_nu" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a>
-        </div>
-
-        <!-- Burger Menu Knappen til mobil -->
-        <button id="burgermenu" class="lg:hidden text-white focus:outline-none" x-on:click="showmenu = ! showmenu"> <!-- Burger-ikon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
+<div
+  x-data="{ showmenu: false }"
+  class="fixed lg:static w-full bg-primary shadow-md"
+>
+  <div
+    id="navbar"
+    class="flex flex-row justify-between items-center max-w-7xl mx-auto px-4 py-4"
+  >
+    <!-- Logo Sektion -->
+    <div id="logo" class="flex items-center ml-0 mr-16">
+      <!-- Logo placeret helt til venstre -->
+      <img src="/public/svg/logo_header.svg" alt="hjem" class="h-12" />
+      <!-- Logo med højden 12 -->
     </div>
 
-    <!-- Mobilmenuen som vises, når burgerknappen er aktiv -->
-    <nav id="mobilmenu" class="lg:hidden bg-[#012B27] flex flex-col items-center w-full py-4 space-y-4 border-t border-white" 
-    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="w-full">
-            <li class="text-center py-2">
-                <a href="#hjem" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Hjem</a> <!-- Mobil link 1 -->
-            </li>
-            <li class="text-center py-2">
-                <a href="#howto" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">How to</a> <!-- Mobil link 2 -->
-            </li>
-            <li class="text-center py-2">
-                <a href="#ressourcer" class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition">Ressourcer</a> <!-- Mobil link 3 -->
-            </li>
-            <li class="text-center py-2">
-                <a href="#register" class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition">Register</a> <!-- Mobil knap -->
-            </li>
-        </ul>
+    <!-- Desktop Navigation -->
+    <nav id="desktopmenu" class="hidden lg:flex flex-grow justify-start ml-6">
+      <!-- Navigation links, venstre-centreret -->
+      <ul class="flex flex-row space-x-12">
+        <!-- Afstand mellem links -->
+        <li>
+          <a
+            href="/hjem"
+            class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
+            >Hjem</a
+          >
+          <!-- Link 1 -->
+        </li>
+        <li>
+          <a
+            href="/howto"
+            class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
+            >How to</a
+          >
+          <!-- Link 2 -->
+        </li>
+        <li>
+          <a
+            href="/register"
+            class="text-[#F6FAFA] font-sans text-sm font-bold leading-[30px] tracking-[0.48px] uppercase hover:text-accent transition"
+            >Ressourcer</a
+          >
+          <!-- Link 3 -->
+        </li>
+      </ul>
+      <button
+        id="burgermenu"
+        class="lg:hidden"
+        x-on:click="showmenu = ! showmenu">Menu</button
+      >
     </nav>
+
+    <!-- Knappen "Register" synlig på store skærme -->
+    <div class="hidden lg:block ml-auto">
+      <a
+        href="#køb_nu"
+        class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition"
+        >Register</a
+      >
+    </div>
+
+    <!-- Burger Menu Knappen til mobil -->
+    <button
+      id="burgermenu"
+      class="lg:hidden text-white focus:outline-none"
+      x-on:click="showmenu = ! showmenu"
+    >
+      <!-- Burger-ikon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobilmenuen som vises, når burgerknappen er aktiv -->
+  <nav
+    id="mobilmenu"
+    class="lg:hidden bg-[#012B27] flex flex-col items-center w-full py-4 space-y-4 border-t border-white"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul class="w-full">
+      <li class="text-center py-2">
+        <a
+          href="#hjem"
+          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
+          >Hjem</a
+        >
+        <!-- Mobil link 1 -->
+      </li>
+      <li class="text-center py-2">
+        <a
+          href="#howto"
+          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
+          >How to</a
+        >
+        <!-- Mobil link 2 -->
+      </li>
+      <li class="text-center py-2">
+        <a
+          href="#ressourcer"
+          class="text-[#F6FAFA] font-sans text-sm font-bold uppercase hover:text-accent transition"
+          >Ressourcer</a
+        >
+        <!-- Mobil link 3 -->
+      </li>
+      <li class="text-center py-2">
+        <a
+          href="#register"
+          class="inline-flex justify-center items-center gap-2.5 px-10 py-2 bg-[#DDEFFF] text-[#0D3C2F] uppercase rounded-full text-sm font-bold hover:bg-blue-200 hover:text-accent transition"
+          >Register</a
+        >
+        <!-- Mobil knap -->
+      </li>
+    </ul>
+  </nav>
 </div>
