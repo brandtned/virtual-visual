@@ -20,7 +20,11 @@ import Upbtn from "../components/Upbtn.astro";
         Digital Cleanup Day
       </h1>
       <div class="flex justify-end">
-        <img src="/public/svg/datokalender.svg" alt="Kalender" class="z-50 -mt-2" />
+        <img
+          src="/public/svg/datokalender.svg"
+          alt="Kalender"
+          class="z-50 -mt-2"
+        />
       </div>
       <div class="flex items-center justify-end">
         <Link btnText="Tilføj til kalender" links="#" />
@@ -31,71 +35,81 @@ import Upbtn from "../components/Upbtn.astro";
         <Secondarybtn btnText="Del med en ven" link="#" />
       </div>
       <div class="bg-primarylight w-full absolut -mt-128">
-        <img src="/svg/forsideillu.svg" alt="Dame siddende på en bakke" class="w-full -z-50" />
+        <img
+          src="/svg/forsideillu.svg"
+          alt="Dame siddende på en bakke"
+          class="w-full -z-50"
+        />
       </div>
     </div>
-    <section class="bg-primary">
-      <h2 class="text-seasalt text-5xl font-bold py-16 text-center">
-        Hvad er Digital Cleanup Day?
-      </h2>
-      <div
-        class="leading-relaxed text-seasalt text-lg mx-auto max-w-xl font-light">
-        <p>
-          <span class="font-bold">Digital Cleanup Day</span> er en dag dedikeret
-          til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske
-          miljø på World Cleanup Day.
-        </p>
-        <p class="py-6">
-          Nu på sit femte år og organiseret af Let's Do It World, sigter Digital
-          Cleanup Day mod at skabe opmærksomhed omkring digital forurening,
-          opfordre enkeltpersoner og virksomheder til at rydde op og
-          omstrukturere deres online tilstedeværelse.
-        </p>
-      </div>
-      <div class="flex justify-center">
-        <Datacard
-          imageSrc="/svg/people.svg" alt="gruppe af mennesker"
-          altText="foto"
-          headline="1.184.747"
-          paragraphText="deltagere har reduceret datalagring, hvilket sparer energi og CO2. Det svarer til energibesparelsen af millioner timers LED-lys."
-        />
-        <Datacard
-          imageSrc="/svg/videofolder.svg" alt="Videofolder"
-          altText="foto"
-          headline="14,5 M GB"
-          paragraphText="data slettet svarende til 7,25 millioner timers HD-video eller tusindvis af husstandes årlige elforbrug."
-        />
-        <Datacard
-          imageSrc="/svg/tree.svg" alt="Træ"
-          altText="foto"
-          headline="3.625 tons"
-          paragraphText="CO2-produktion forhindret årligt. Det svarer til at plante 60.000 træer eller tage 785 biler ud af drift i et år."
-        />
-      </div>
-      <div class="relative -mb-8">
-        <Afrundtbanner1
-          btnText="Skær ned på dit CO2-udslip ved at deltage i Digital Cleanup Day!"
-        />
-      </div>
-    </section>
-    <section class="bg-secondarylight">
-      <Hvorforboks />
-    </section>
-    <section class="bg-seasalt p-16">
-      <h2 class="text-primary text-3xl font-bold mb-[5%] text-center">
-        Flere gode grunde til at deltage
-      </h2>
-      <Factcard class="" />
-    </section>
-
-    <section class="bg-primary h-80">
-      <h2 class="text-secondarylight text-3xl font-bold mt-20 text-center">
-        Sådan deltager du i Digital Cleanup Day
-      </h2>
-      <Deltagerkort />
-    </section>
-    <Upbtn />
-
-    <Megafon />
   </section>
+  <section class="bg-primary">
+    <h2 class="text-seasalt text-5xl font-bold py-16 text-center">
+      Hvad er Digital Cleanup Day?
+    </h2>
+    <div
+      class="leading-relaxed text-seasalt text-lg mx-auto max-w-xl font-light"
+    >
+      <p>
+        <span class="font-bold">Digital Cleanup Day</span> er en dag dedikeret til
+        at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø
+        på World Cleanup Day.
+      </p>
+      <p class="py-6">
+        Nu på sit femte år og organiseret af Let's Do It World, sigter Digital
+        Cleanup Day mod at skabe opmærksomhed omkring digital forurening,
+        opfordre enkeltpersoner og virksomheder til at rydde op og omstrukturere
+        deres online tilstedeværelse.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <Datacard
+        imageSrc="/svg/people.svg"
+        alt="gruppe af mennesker"
+        altText="foto"
+        headline="1.184.747"
+        paragraphText="deltagere har reduceret datalagring, hvilket sparer energi og CO2. Det svarer til energibesparelsen af millioner timers LED-lys."
+      />
+      <Datacard
+        imageSrc="/svg/videofolder.svg"
+        alt="Videofolder"
+        altText="foto"
+        headline="14,5 M GB"
+        paragraphText="data slettet svarende til 7,25 millioner timers HD-video eller tusindvis af husstandes årlige elforbrug."
+      />
+      <Datacard
+        imageSrc="/svg/tree.svg"
+        alt="Træ"
+        altText="foto"
+        headline="3.625 tons"
+        paragraphText="CO2-produktion forhindret årligt. Det svarer til at plante 60.000 træer eller tage 785 biler ud af drift i et år."
+      />
+    </div>
+    <div class="relative -mb-8">
+      <Afrundtbanner1
+        btnText="Skær ned på dit CO2-udslip ved at deltage i Digital Cleanup Day!"
+      />
+    </div>
+  </section>
+  <section class="bg-secondarylight">
+    <Hvorforboks />
+  </section>
+  <section class="bg-seasalt p-16">
+    <h2 class="text-primary text-3xl font-bold mb-[5%] text-center">
+      Flere gode grunde til at deltage
+    </h2>
+    <Factcard class="" />
+  </section>
+  <div class="flex justify-end relative -mt-10">
+    <Afrundtbanner2 btnText="Husk Digital Clenaup Day d. 15 marts 2025" />
+  </div>
+  <section class="bg-primary h-80 -mt-6">
+    <h2 class="text-secondarylight text-3xl font-bold text-center pt-20">
+      Sådan deltager du i Digital Cleanup Day
+    </h2>
+    <Deltagerkort />
+  </section>
+  <Upbtn />
+
+  <Megafon />
 </MainLayout>
