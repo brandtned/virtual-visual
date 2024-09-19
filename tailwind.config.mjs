@@ -12,19 +12,7 @@ export default {
 			accent:'#FFDA03',
 			whiteish:'#F6FAFA'
 		},
-		extend: {
-			typography: (theme) => ({
-				DEFAULT: {
-					css: {
-						h1: {
-							color: theme (color.s),
-							fontSize: theme('fontSize.5xl'),
-						}
-					}
-				}
-
-			})
-		},
+		extend: {},
 	},
 	plugins: [],
 }
