@@ -1,3 +1,5 @@
+import { CssSyntaxError } from 'postcss';
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -10,7 +12,10 @@ export default {
 			accent:'#FFDA03',
 			seasalt:'#F6FAFA',
 		},
-		extend: {},
+		extend: {      spacing: {
+			'100': '25rem',
+			'128': '32rem',
+		  }},
 	},
 	plugins: [],
 }

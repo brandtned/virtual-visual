@@ -15,8 +15,8 @@ import Upbtn from "../components/Upbtn.astro";
 
 <MainLayout title="Titel">
   <section class="bg-primarylight">
-    <div class="p-24">
-      <h1 class="text-7xl text-whiteish font-bold flex justify-end">
+    <div class="p-10 px-24">
+      <h1 class="text-7xl text-whiteish font-bold flex justify-end pb-10">
         Digital Cleanup Day
       </h1>
       <div class="flex justify-end">
@@ -27,14 +27,11 @@ import Upbtn from "../components/Upbtn.astro";
         </div>
         <img src="/svg/kalender.svg" alt="" class="h-40" />
       </div>
-      <div class="flex items-center justify-end">
-        <Link btnText="Tilfoj til kalender" link="#" />
-      </div>
-      
     </div>
-    <div class="flex items-center justify-end pb-8">
-      <Primarybtn btnText="Registrer" link="#" />
-      <Secondarybtn btnText="Del med en ven" link="#" />
+    <div class="flex">
+      <Primarybtn />
+      <Secondarybtn />
+      <Link />
     </div>
     <div id="bakker+kvindekomponent"></div>
   </section>
@@ -59,19 +56,19 @@ import Upbtn from "../components/Upbtn.astro";
     </div>
     <div class="flex justify-center">
       <Datacard
-        imageSrc="/svg/document.svg"
+        imageSrc="/svg/people.svg"
         altText="foto"
         headline="1.184.747"
         paragraphText="deltagere har reduceret datalagring, hvilket sparer energi og CO2. Det svarer til energibesparelsen af millioner timers LED-lys."
       />
       <Datacard
-        imageSrc="/svg/document.svg"
+        imageSrc="/svg/videofolder.svg"
         altText="foto"
         headline="14,5 M GB"
         paragraphText="data slettet svarende til 7,25 millioner timers HD-video eller tusindvis af husstandes årlige elforbrug."
       />
       <Datacard
-        imageSrc="/svg/document.svg"
+        imageSrc="/svg/tree.svg"
         altText="foto"
         headline="3.625 tons"
         paragraphText="CO2-produktion forhindret årligt. Det svarer til at plante 60.000 træer eller tage 785 biler ud af drift i et år."
@@ -82,13 +79,16 @@ import Upbtn from "../components/Upbtn.astro";
   <Afrundtbanner1 btnText="Skær ned på dit CO2-udslip ved at deltage i Digital Cleanup Day!" />
 </div>
   <section><Hvorforboks /></section>
-  <section class="seasalt"><Factcard /></section>
-
-  
-
-  <section class="bg-primary">
-    <h2>Sådan deltager du i Digital Clenaup Day</h2>
-    <Deltagerkort />
+  <section class="whiteish">
+    <h2 class="text-primary text-3xl font-bold mb-[5%] text-center">
+      Flere gode grunde til at deltage
+    </h2>
+    <Factcard />
+  </section>
+  BANNER
+    <section class="bg-primary h-80">
+      <h2 class="text-secondarylight text-3xl font-bold mt-20 mb-20 text-center">Sådan deltager du i Digital Cleanup Day</h2>
+      <Deltagerkort />
   </section>
 <div class="flex items-center justify-end pb-8 -mt-96">
   <Afrundtbanner2 btnText="Husk Digital Clenaup Day d. 15 marts 2025" />
