@@ -14,32 +14,21 @@ import Upbtn from "../components/Upbtn.astro";
 ---
 
 <MainLayout title="Titel">
-  <section class="bg-primarylight">
-    <div class="p-10 px-24">
+  <section class="bg-primarylight w-full pt-16 md:pt-32 md:p-20">
+    <div class="">
       <h1 class="text-7xl text-seasalt font-bold flex justify-end pb-10">
         Digital Cleanup Day
       </h1>
       <div class="flex justify-end">
-        <img
-          src="/public/svg/datokalender.svg"
-          alt="Kalender"
-          class="z-50 -mt-2"
-        />
+        <img src="/public/svg/datokalender.svg" alt="Kalender" class="" />
       </div>
       <div class="flex items-center justify-end">
-        <Link btnText="Tilføj til kalender" links="#" />
+        <Link btnText="Tilføj til kalender" links="" />
       </div>
 
       <div class="flex items-center justify-end pb-8">
         <Primarybtn btnText="Rigistrer" link="/forms" />
         <Secondarybtn btnText="Del med en ven" link="#" />
-      </div>
-      <div class="bg-primarylight w-full absolut -mt-128">
-        <img
-          src="/svg/forsideillu.svg"
-          alt="Dame siddende på en bakke"
-          class="w-full -z-50"
-        />
       </div>
     </div>
   </section>
