@@ -4,12 +4,11 @@ import Deltagerkort from "../components/Deltagerkort.astro";
 import Primarybtn from "../components/Primarybtn.astro";
 import Secondarybtn from "../components/Secondarybtn.astro";
 import Factcard from "../components/Factcard.astro";
-import Datacard from "../components/DataCard.astro";
+import Datacard from "../components/Datacard.astro";
 import Link from "../components/Link.astro";
 import Megafon from "../components/Megafon.astro";
 import Hvorforboks from "../components/Hvorforboks.astro";
 import Howtotrin from "../components/Howtotrin.astro";
-import DataCard from "../components/DataCard";
 import Fodskridt from "../components/Fodskridt.astro";
 ---
 
@@ -62,30 +61,26 @@ import Fodskridt from "../components/Fodskridt.astro";
   </section>
   <section class="bg-whiteish h-36"></section>
 
-  <DataCard
-  imageSrc="/svg/document.svg"
-  altText="foto"
-  headline="Headline"
-  paragraphText="Text"
-/> 
-<HvorforBoks/>
+  <Datacard
+    imageSrc="/svg/document.svg"
+    altText="foto"
+    headline="Headline"
+    paragraphText="Text"
+  />
+  <Hvorforboks />
 
+  <Factcard
+    imageSrc="/svg/document.svg"
+    altText="foto"
+    headline="Headline"
+    paragraphText="Text"
+  />
 
-<Factcard
-imageSrc="/svg/document.svg"
-altText="foto"
-headline="Headline"
-paragraphText="Text"
-/>
-
-<Howtotrin
-imageSrc="/svg/document.svg"
-altText="foto"
-headline="Trin 1: Ryd op i din smartphone"
-paragraphText="Slet apps, du sjældent eller aldrig bruger, da de kan dræne batteri og bruge data. Fjern også gamle konti og data for at øge din telefons hastighed og batterilevetid. Gennemgå dine fotos og "
-/>
-<Fodskridt
-src="/svg/fodsporvol2.svg" />
-<Megafon/>
-
+  <Howtotrin
+    imageSrc="/svg/document.svg"
+    altText="foto"
+    headline="Trin 1: Ryd op i din smartphone"
+    paragraphText="Slet apps, du sjældent eller aldrig bruger, da de kan dræne batteri og bruge data. Fjern også gamle konti og data for at øge din telefons hastighed og batterilevetid. Gennemgå dine fotos og "
+  />
+  <Megafon />
 </MainLayout>
