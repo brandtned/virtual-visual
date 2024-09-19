@@ -15,6 +15,7 @@ export default {
 		extend: {      spacing: {
 			'100': '25rem',
 			'128': '39rem',
+			'130': '44rem'
 		  }},
 	},
 	plugins: [],
